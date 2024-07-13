@@ -1,6 +1,6 @@
 
-#define mod = 1000000007
-#define N = 1000006
+#define mod 1000000007
+#define N 1000006
 
 ///Modular m.Inverse calculate
 //log(n)
