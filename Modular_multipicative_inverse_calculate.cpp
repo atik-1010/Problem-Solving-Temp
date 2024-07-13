@@ -5,7 +5,7 @@
 ///Modular m.Inverse calculate
 //log(n)
 ll powerMod(ll a, ll b){
-    if(b==0)return 1%mod;
+    if(b==0)return 1;
 
     if(b%2==0){
         ll x = powerMod(a, b/2);
@@ -19,7 +19,7 @@ ll powerMod(ll a, ll b){
     return 0;
 }
 
-ll inverseMod(ll a, ll b){
+ll inverseMod(ll a){
     return powerMod(a, mod-2);
 }
 
