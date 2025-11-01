@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// akta array dewa ache, and k dewa ache,  and kichu range dewa ache protita range ar sathe k jog last array ta output dite hobe
+// akta array dewa ache, and kichu range dewa ache protita range ar sathe k jog last array ta output dite hobe
 void fun(){
   int n;
   cin>>n;
