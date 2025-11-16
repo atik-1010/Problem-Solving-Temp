@@ -31,3 +31,40 @@ int main() {
 
     return 0;
 }
+
+
+
+// Another Code 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int n;
+  cin>>n;
+  
+  vector<int>a(n);
+  for(int i=0; i<n; i++){
+      cin>>a[i];
+  }
+  
+  int l=0, r = 0;
+  
+  map<int, int>m;
+  int ans = 0;
+  
+  while(r<n){
+      m[a[r]]++;
+      if(m[a[r]]>1){
+          while(m[a[r]]>1){
+              m[a[l]]--;
+              l++;
+          }
+      }
+      ans = max(ans, r-l+1);
+      r++;
+  }
+  
+    cout<<ans<<endl;
+
+    return 0;
+}
