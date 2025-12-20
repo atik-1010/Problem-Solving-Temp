@@ -1,0 +1,81 @@
+///*Allah is The Best Planner*///
+#include<bits/stdc++.h>
+#define ll                    long long
+#define lli                   long long int
+
+
+void io()
+{
+#ifndef ONLINE_JUDGE
+ 
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+ 
+#endif
+}
+
+
+//int n, a[100005], dp[100005];
+void fun()
+{  
+  
+    string s;
+    string p;
+
+    cin>>s>>p;
+
+    map<char, int>st;
+    vector<int>ans;
+    for(auto &it:p){
+        st[it];
+    }
+
+    map<char, int>cr;
+
+    int l=0, r=0;
+
+    while(r<s.size()){
+        cr[s[r]]++;
+
+           
+            while(cr[s[r]]>st[s[r]]){
+                cr[s[l]]--;
+                l++;
+            }
+        
+   
+        bool kom=false;
+
+        for(char c='a'; c<='z'; c++){
+           
+            if(cr[c]<st[c]){
+                kom=true;
+            }
+        }
+
+
+        if(kom==false){
+            ans.push_back(l);
+        }
+        r++;
+
+    }
+
+    for(auto i : ans){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    
+}
+ 
+int main()
+{
+    io(); Faster;
+
+    //int f; cin>>f; while(f--) fun();
+   
+    fun();
+
+    return 0;
+}
