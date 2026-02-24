@@ -1,4 +1,4 @@
-//Divisor list Sum 1 to N 
+//Proper Divisor list Sum 1 to N 
 #include<bits/stdc++.h>
 using namespace std;
 const int N = 1e6+7;
