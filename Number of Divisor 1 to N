@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+void io()
+{
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
+
+void fun(){
+    int n; 
+    cin>>n;
+    int nod[n+1];
+    memset(nod, 0, sizeof(nod));
+    for(int i=1; i<=n; i++){
+        for(int j=i; j<=n; j+=i){
+            nod[j]++;
+        }
+    }
+    for(int i=1; i<=n; i++){
+        cout<<nod[i]<<endl;
+    }
+}
+int main(){
+    io();
+    fun();
+
+    return 0;
+}
