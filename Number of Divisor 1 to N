@@ -1,4 +1,4 @@
-//Number of Divisors 1 to N
+///Number of Divisors 1 to N
 
 #include<bits/stdc++.h>
 using namespace std;
