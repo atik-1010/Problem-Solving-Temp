@@ -1,0 +1,41 @@
+//Divisor List
+
+#include<bits/stdc++.h>
+using namespace std;
+const int N = 1e6+7;
+void io()
+{
+#ifndef ONLINE_JUDGE
+ 
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+ 
+#endif
+}
+vector<int>nod[N];
+void fun(){
+
+    for(int i=1; i<N; i++){
+        for(int j=i; j<N; j+=i){
+            nod[j].push_back(i);
+        }
+    }
+
+    int n;
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        int x; 
+        cin>>x;
+
+       for(auto j : nod[x]){
+        cout<<j<<" ";
+       }
+       cout<<endl;
+    }
+}
+int main(){
+    io();
+    fun();
+
+    return 0;
+}
