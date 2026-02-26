@@ -1,0 +1,38 @@
+//Prime Number using Sieve 
+#include<bits/stdc++.h>
+using namespace std;
+const int N = 1e8;
+void io()
+{
+#ifndef ONLINE_JUDGE
+ 
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+ 
+#endif
+}
+bool isPrime[N];
+void fun(){
+    for(int i=2; i<N; i++)isPrime[i]=true;
+    vector<int>primes = {2};
+    for(int i=3; i*i<=N; i+=2){
+        if(isPrime[i]==true){
+        for(int j=i*i; j<N; j+=i*2){
+                isPrime[j]=false;
+            }
+        }
+    }
+
+    for(int i=3; i<N; i+=2){
+        if(isPrime[i]==true)primes.push_back(i);
+    }
+    for(int i=0; i<(int)primes.size(); i+=100){
+        cout<<primes[i]<<'\n';
+    }
+}
+int main(){
+    io();
+    fun();
+
+    return 0;
+}
